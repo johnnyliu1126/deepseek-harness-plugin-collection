@@ -1,0 +1,50 @@
+name: Verify platform downloads
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - edition: macos-intel
+            runner: macos-15-intel
+            architecture: x64
+            shell: bash
+            local_plugins: dsh-restart dsh-balance-monitor
+          - edition: macos-apple-silicon
+            runner: macos-15
+            architecture: arm64
+            shell: bash
+            local_plugins: dsh-restart dsh-balance-monitor
+          - edition: windows
+            runner: windows-2025
+            architecture: x64
+            shell: pwsh
+            local_plugins: dsh-balance-monitor
+    runs-on: ${{ matrix.runner }}
+    defaults:
+      run:
+        working-directory: platforms/${{ matrix.edition }}
+        shell: ${{ matrix.shell }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          architecture: ${{ matrix.architecture }}
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          architecture: ${{ matrix.architecture }}
+      - run: python scripts/platform_support.py --check-node
+      - run: python scripts/check.py
+      - run: python -m unittest discover -s tests -v
+      - run: node --test plugins/dsh-balance-monitor/core.test.js tests/routes.test.mjs
+      - run: python scripts/collection.py --target "${{ runner.temp }}/local-profile" --plugins ${{ matrix.local_plugins }} --apply --fetch --manager npm
+      - run: npm install --global pnpm@11.25.0
+      - run: python scripts/collection.py --target "${{ runner.temp }}/full-profile" --all --apply --fetch

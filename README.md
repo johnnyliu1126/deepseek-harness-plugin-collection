@@ -6,15 +6,15 @@ A catalog of additional DeepSeek Harness plugins for discovering features, insta
 
 The collection documents **19 plugin entries, 12 top-level install choices and 72 feature descriptions**. Two local plugins include source. Built-in DSH plugins are excluded; third-party packages retain their original authors/upstream links and are downloaded from pinned, integrity-checked distributions.
 
-## Choose your platform
+## One repository, three platform downloads
 
-| Platform / 平台 | Repository / 仓库 |
-|---|---|
-| Mac Intel / x64 | [deepseek-harness-plugins-macos-intel](https://github.com/johnnyliu1126/deepseek-harness-plugins-macos-intel) |
-| Mac M 系列 / arm64 | [deepseek-harness-plugins-macos-apple-silicon](https://github.com/johnnyliu1126/deepseek-harness-plugins-macos-apple-silicon) |
-| Windows / x64 | [deepseek-harness-plugins-windows](https://github.com/johnnyliu1126/deepseek-harness-plugins-windows) |
+| Platform / 平台 | Download / 下载 | Instructions / 说明 |
+|---|---|---|
+| macOS Intel | [macos-intel.zip](https://github.com/johnnyliu1126/deepseek-harness-plugin-collection/releases/download/v0.2.0/deepseek-harness-plugins-macos-intel.zip) | [README](platforms/macos-intel/README.md) |
+| Mac M 系列 / Apple Silicon | [macos-apple-silicon.zip](https://github.com/johnnyliu1126/deepseek-harness-plugin-collection/releases/download/v0.2.0/deepseek-harness-plugins-macos-apple-silicon.zip) | [README](platforms/macos-apple-silicon/README.md) |
+| Windows x64 | [windows.zip](https://github.com/johnnyliu1126/deepseek-harness-plugin-collection/releases/download/v0.2.0/deepseek-harness-plugins-windows.zip) | [README](platforms/windows/README.md) |
 
-Each edition has native architecture checks and its own CI. / 每版有独立架构检查与对应平台 CI。Windows 版排除 macOS 重启插件。
+Choose your platform ZIP from the [v0.2.0 release](https://github.com/johnnyliu1126/deepseek-harness-plugin-collection/releases/tag/v0.2.0), extract it and follow its README. No separate repository is required. All edition sources live under `platforms/`; Windows x64 excludes macOS-only restart. Platform CI does not certify every UI/external service.
 
 ## Where to start
 

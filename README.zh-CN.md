@@ -6,15 +6,15 @@
 
 本仓库记录 **19 个插件条目、12 个顶层安装项、72 条功能说明**，其中两个本地插件提供源码。DeepSeek Harness 自带插件不上传；第三方插件保留原作者与上游地址，安装时从固定版本来源下载并校验。
 
-## 按平台选择仓库
+## 一个仓库，三个平台下载版本
 
-| Platform / 平台 | Repository / 仓库 |
-|---|---|
-| Mac Intel / x64 | [deepseek-harness-plugins-macos-intel](https://github.com/johnnyliu1126/deepseek-harness-plugins-macos-intel) |
-| Mac M 系列 / arm64 | [deepseek-harness-plugins-macos-apple-silicon](https://github.com/johnnyliu1126/deepseek-harness-plugins-macos-apple-silicon) |
-| Windows / x64 | [deepseek-harness-plugins-windows](https://github.com/johnnyliu1126/deepseek-harness-plugins-windows) |
+| Platform / 平台 | Download / 下载 | Instructions / 说明 |
+|---|---|---|
+| macOS Intel | [macos-intel.zip](https://github.com/johnnyliu1126/deepseek-harness-plugin-collection/releases/download/v0.2.0/deepseek-harness-plugins-macos-intel.zip) | [README](platforms/macos-intel/README.zh-CN.md) |
+| Mac M 系列 / Apple Silicon | [macos-apple-silicon.zip](https://github.com/johnnyliu1126/deepseek-harness-plugin-collection/releases/download/v0.2.0/deepseek-harness-plugins-macos-apple-silicon.zip) | [README](platforms/macos-apple-silicon/README.zh-CN.md) |
+| Windows x64 | [windows.zip](https://github.com/johnnyliu1126/deepseek-harness-plugin-collection/releases/download/v0.2.0/deepseek-harness-plugins-windows.zip) | [README](platforms/windows/README.zh-CN.md) |
 
-Each edition has native architecture checks and its own CI. / 每版有独立架构检查与对应平台 CI。Windows 版排除 macOS 重启插件。
+在 [v0.2.0 Release](https://github.com/johnnyliu1126/deepseek-harness-plugin-collection/releases/tag/v0.2.0) 选择与你电脑匹配的 ZIP，解压后按包内 README 安装。无需克隆其他仓库。平台源码统一位于 `platforms/`；Windows x64 版排除 macOS 专用重启插件。三个平台的 CI 检查不等于全部桌面和外部服务均已验证。
 
 ## 先看这里
 

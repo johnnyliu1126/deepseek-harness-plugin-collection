@@ -1,0 +1,11 @@
+{
+  "id": "macos-apple-silicon",
+  "label": "Mac M 系列 / Apple Silicon",
+  "system": "Darwin",
+  "architecture": "arm64",
+  "runner": "macos-15",
+  "nodeMajor": 24,
+  "sourceRepository": "https://github.com/johnnyliu1126/deepseek-harness-plugin-collection",
+  "sourceCommit": "c10c4436740e8d462215f361d3a8e18b3801d326",
+  "excludedPackages": []
+}
