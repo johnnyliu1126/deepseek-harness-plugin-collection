@@ -6,6 +6,16 @@
 
 本仓库记录 **19 个插件条目、12 个顶层安装项、72 条功能说明**，其中两个本地插件提供源码。DeepSeek Harness 自带插件不上传；第三方插件保留原作者与上游地址，安装时从固定版本来源下载并校验。
 
+## 按平台选择仓库
+
+| Platform / 平台 | Repository / 仓库 |
+|---|---|
+| Mac Intel / x64 | [deepseek-harness-plugins-macos-intel](https://github.com/johnnyliu1126/deepseek-harness-plugins-macos-intel) |
+| Mac M 系列 / arm64 | [deepseek-harness-plugins-macos-apple-silicon](https://github.com/johnnyliu1126/deepseek-harness-plugins-macos-apple-silicon) |
+| Windows / x64 | [deepseek-harness-plugins-windows](https://github.com/johnnyliu1126/deepseek-harness-plugins-windows) |
+
+Each edition has native architecture checks and its own CI. / 每版有独立架构检查与对应平台 CI。Windows 版排除 macOS 重启插件。
+
 ## 先看这里
 
 - 想知道装了什么：看下面的插件表。

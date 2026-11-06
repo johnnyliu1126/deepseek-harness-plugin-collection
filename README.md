@@ -6,6 +6,16 @@ A catalog of additional DeepSeek Harness plugins for discovering features, insta
 
 The collection documents **19 plugin entries, 12 top-level install choices and 72 feature descriptions**. Two local plugins include source. Built-in DSH plugins are excluded; third-party packages retain their original authors/upstream links and are downloaded from pinned, integrity-checked distributions.
 
+## Choose your platform
+
+| Platform / 平台 | Repository / 仓库 |
+|---|---|
+| Mac Intel / x64 | [deepseek-harness-plugins-macos-intel](https://github.com/johnnyliu1126/deepseek-harness-plugins-macos-intel) |
+| Mac M 系列 / arm64 | [deepseek-harness-plugins-macos-apple-silicon](https://github.com/johnnyliu1126/deepseek-harness-plugins-macos-apple-silicon) |
+| Windows / x64 | [deepseek-harness-plugins-windows](https://github.com/johnnyliu1126/deepseek-harness-plugins-windows) |
+
+Each edition has native architecture checks and its own CI. / 每版有独立架构检查与对应平台 CI。Windows 版排除 macOS 重启插件。
+
 ## Where to start
 
 - Browse the tables below to see the installed additions.
